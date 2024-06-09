@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .App{
+
+} */
+.main {
+  position: relative;
+  /* sory */
+  top: -8px;
+  height: 700px;
+  width: 650px;
+  margin: auto;
+  background: no-repeat center url("../public/picture.PNG");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.modal {
+  position: absolute;
+  top: 54px;
+  left: 208px;
+  width: 220px;
+  height: 390px;
+  border: 1px solid rgb(210, 205, 205);
+  border-radius: 10px;
+  color: #d4d0d0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  gap: 5px;
+  font-size: 15px;
+}
+.search__close {
+  color: #1932f1;
 }
 
-.App-link {
-  color: #61dafb;
+.modalList {
+  overflow: auto;
+  scrollbar-width: none;
+  list-style-type: none;
+  font-size: 14px;
+  height: 328px;
+  border-radius: 10px;
+  background: rgb(20, 19, 19);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button {
+  display: flex;
+  position: absolute;
+  padding: 8px;
+  width: 106px;
+  left: 323px;
+  top: 14px;
+  font-size: 14px;
+  background: #141313;
+  border-radius: 10px;
+  color: #e1e0e0;
+  gap: 10px;
+
+}
+.button__icon {
+  display: flex;
+  align-items: center;
+  color: #eeecec;
+}
+.button__active{
+  display: flex;
+  position: absolute;
+  padding: 8px;
+  width: 100px;
+  left: 325px;
+  top: 12px;
+  font-size: 14px;
+  background: #525252;
+  border-radius: 10px;
+  color: #e1e0e0;
+  gap: 10px;
+}
+
+.modalList__item {
+  padding: 5px 8px;
+}
+
+span {
+  padding: 5px;
+}
+
+.input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #d4d0d0;
+}
+
+.choose {
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+}
+.shoose__favorites {
+  display: flex;
+  gap: 5px;
 }
