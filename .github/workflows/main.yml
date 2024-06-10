@@ -1,0 +1,24 @@
+name: Build and Release 
+
+on:
+push:
+branches: [ "MASTER" ]
+workflow_dispatch:
+
+jobs:
+build:
+runs-on: ubuntu-lates;
+steps:
+-uses: actions/checkout@v3
+
+-name: Install dependensies
+ run: npm ci
+
+-name: Build the app
+ run: npm run build 
+
+ -name: Deploy 
+ -uses: JamesIves/githab-pages-deploy-action @v4
+
+with:
+folder: dist
